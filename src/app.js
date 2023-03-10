@@ -1,5 +1,7 @@
 const express = require('express');
-const { login, registerNewUser, getAllUsersInfo } = require('./Controllers/userController');
+const {
+   login, registerNewUser, getAllUsersInfo, getUserInfoByItsID,
+  } = require('./Controllers/userController');
 const { validateNewUser } = require('./Middlewares/validateNewUser');
 const { validateToken } = require('./Middlewares/validateToken');
 
@@ -11,10 +13,9 @@ app.get('/', (_request, response) => {
 });
 
 app.use(express.json());
-
 app.post('/login', login);
-
 app.post('/user', validateNewUser, registerNewUser);
 app.get('/user', validateToken, getAllUsersInfo);
+app.get('/user/:id', validateToken, getUserInfoByItsID);
 
 module.exports = app;
