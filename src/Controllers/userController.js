@@ -29,7 +29,16 @@ const registerNewUser = async (req, res) => {
   return res.status(201).json({ token });
 };
 
+const getAllUsersInfo = async (_req, res) => {
+  const allUsers = await userService.getAllUsers();
+  const result = allUsers.map(({ 
+    id, displayName, email, image,
+  }) => ({ id, displayName, email, image }));
+  return res.status(200).json(result);
+};
+
 module.exports = {
   login,
   registerNewUser,
+  getAllUsersInfo,
 };
