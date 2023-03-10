@@ -17,6 +17,19 @@ const login = async (req, res) => {
   return res.status(200).json({ token });
 };
 
+const registerNewUser = async (req, res) => {
+  const { displayName, email, password } = req.body;
+  const allUsers = await userService.getAllUsers();
+
+  if (allUsers.find((user) => user.email === email)) {
+    return res.status(409).json({ message: 'User already registered' });
+  }
+  await userService.createNewUser({ displayName, email, password });
+  const token = newToken(email);
+  return res.status(201).json({ token });
+};
+
 module.exports = {
   login,
+  registerNewUser,
 };
