@@ -10,7 +10,6 @@ const { validateCategoryName } = require('./Middlewares/validateNameCategory');
 
 const app = express();
 
-// não remova ou mova esse endpoint
 app.get('/', (_request, response) => {
   response.send();
 });
