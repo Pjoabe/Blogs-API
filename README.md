@@ -34,3 +34,8 @@ Ao utilizá-lo com o método <strong>POST</strong>, o usuário fará login no bl
 * [JWT](https://jwt.io/introduction/);
 * [dotenv](https://www.dotenv.org/docs);
 * [mysql](https://dev.mysql.com/doc/);
+## ⬇️ Instalando dependências
+
+```bash
+npm install
+``` 
