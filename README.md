@@ -38,4 +38,8 @@ Ao utilizá-lo com o método <strong>POST</strong>, o usuário fará login no bl
 
 ```bash
 npm install
+```
+## ⬇️ executando a aplicação
+
+```Todos os scripts podem ser encontrados no arquivo package.json
 ``` 
