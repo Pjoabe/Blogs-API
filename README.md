@@ -40,6 +40,5 @@ Ao utilizá-lo com o método <strong>POST</strong>, o usuário fará login no bl
 npm install
 ```
 ## ⬇️ executando a aplicação
-
-```Todos os scripts podem ser encontrados no arquivo package.json
-``` 
+Todos os scripts podem ser encontrados no arquivo package.json
+ 
